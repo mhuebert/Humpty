@@ -104,7 +104,7 @@ Maybe if they had learned to cooperate...
 
 
 # Humpty Dumpty
-_Twitter Edition_
+_Append-Only Twitter Edition_
 
 ```clj
   (def users (atom {}))
