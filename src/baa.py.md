@@ -9,8 +9,8 @@ Baa, baa,
 
 black sheep,
 
-class Sheep(object):
-    >>> def __init__(self, color, lbs_wool):
+    >>> class Sheep(object):
+    ...     def __init__(self, color, lbs_wool):
     ...     self.color = color
     ...     self.lbs_wool = lbs_wool
 
@@ -27,8 +27,7 @@ Have you any wool?
     >>> black_sheep.has_wool()
     True
 
-Yes, sir, yes, sir,
-Three bags full;
+Yes, sir, yes, sir, three bags full;
 
     >>> bag_capacity = 10
     >>> how_many_bags = black_sheep.lbs_wool//bag_capacity
@@ -58,14 +57,13 @@ One for the master,
 And one for the dame,
 
     >>> dame = Person("Dame")
-    >>> print Dame
+    >>> print dame
     Name: Dame; bags of wool: 0
     >>> give_bag_of_wool(black_sheep, dame)
     >>> print dame
     Name: Dame; bags of wool: 1
 
-And one for the little boy
-Who lives down the lane.
+And one for the little boy who lives down the lane.
 
     >>> little_boy_who_lives_down_the_lane = Person("Fred")
     >>> print little_boy_who_lives_down_the_lane
