@@ -79,9 +79,7 @@ Couldn't put Humpty together again.
 
   (defn fix-egg
     [men egg]
-    (cond (can-fix-egg? men) (swap! egg assoc :status "fixed")
-          :else egg)
-    )
+    (when (can-fix-egg? men) (swap! egg assoc :status "fixed")))
 ```
 
 ```clj
@@ -89,7 +87,7 @@ Couldn't put Humpty together again.
   (can-fix-egg? kings-men)
   => false
 
-  (fix-egg kings-men humpty)
+  (fix-egg! kings-men humpty)
   => {:name "Humpty Dumpty" :status "broken"}
 ```
 
